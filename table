@@ -1,15 +1,22 @@
 getgenv().FlowSense = {
+    ['GlobalCheck'] = {
+        ['WallCheck'] = true,
+        ['VisibilityCheck'] = true,
+        ['SelfKnockedCheck'] = true
+    },
     ['KOCheck'] = true,
     ['Resolver'] = true,
     ['Camlock'] = {
         ['Enabled'] = true,
-        ['Prediction'] = 0.145, 
+        ['Prediction'] = 0.145,
         ['Part'] = "HumanoidRootPart",
-        ['Smoothness'] = 0.065,
+        ['Smoothness'] = 0.085,
+        ['Mode'] = "FOV", -- FOV / Toggle
+        ['ToggleKeybind'] = Enum.KeyCode.T,
         ['FOV'] = {
             ['Enabled'] = true,
             ['Color'] = Color3.new(1, 1, 1),
-            ['Radius'] = 90, -- Adjust the FOV size
+            ['Radius'] = 100,
             ['Transparency'] = 0.07
         },
     },
@@ -21,20 +28,26 @@ getgenv().FlowSense = {
     },
     ['VelocityWalk'] = {
         ['Enabled'] = true,
-        ['SpeedMultiplier'] = 7,
-        ['Keybind'] = Enum.KeyCode.H 
+        ['SpeedMultiplier'] = 10,
+        ['Keybind'] = Enum.KeyCode.H
     },
     ['VelocityJump'] = {
-        ['Enabled'] = false,
-        ['JumpMultiplier'] = 5, 
-        ['Keybind'] = Enum.KeyCode.J 
+        ['Enabled'] = true,
+        ['JumpMultiplier'] = 5,
+        ['Keybind'] = Enum.KeyCode.J
     },
     ['NameESP'] = {
         ['Enabled'] = false,
         ['Font'] = Enum.Font.SourceSans,
         ['TextSize'] = 18,
-        ['TextColor'] = Color3.new(0, 0, 0),  
-        ['OutlineColor'] = Color3.new(1, 1, 1), 
-        ['OutlineThickness'] = 2  
+        ['TextColor'] = Color3.new(0, 0, 0),
+        ['OutlineColor'] = Color3.new(1, 1, 1),
+        ['OutlineThickness'] = 2
+    },
+    ['Triggerbot'] = {
+        Settings = {
+            Enabled = true,
+            Delay = 0.04,
+        },
     }
 }
